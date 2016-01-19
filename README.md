@@ -1,10 +1,13 @@
 # angular_challenge_snafu_inc
 angular_challenge_snafu_inc
 
+I am still working on getting my loops in the client file to run correctly. -Amber
+
 ALL RIGHT! Set up a *NEW* project! From the ground up.
 Bring in Angular, that's all we will need for our project today.
 
 ## Business Need:
+
 I am the CTO at Snafu Inc. and here at Snafu we want all of our developers to be internet famous. Our trouble is our developers aren't the creative types and have ended up with handles like [@joeltmiller](http://www.twitter.com/joeltmiller) (no bueno).
 
 

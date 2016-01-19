@@ -10,7 +10,14 @@ app.controller('TwitController', ['$http','$scope', function($http, $scope){
         var theAdj = response.data.adjectives;
         var random = randomNumber(0, theAdj.length);
 
-        $scope.randAdj = theAdj[random]
+        $scope.randAdj = function (){
+            for (i=0, i>theAdj.length, i++){
+                return theAdj;
+            };
+        };
+        return random;
+        //    for (i = 0; i > nouns.length; i++);
+        //    return nouns[random];
 
     });
 

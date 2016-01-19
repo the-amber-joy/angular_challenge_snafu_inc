@@ -6,8 +6,8 @@
     <script src="vendors/angular/angular.min.js"></script>
     <script src="assets/scripts/client.min.js"></script>
 </head>
-<body ng-controller="TwitController">
-    <p>page loaded</p>
-    {{randAdj}}
+<body ng-repeat="TwitController">
+    <p ng-repeat="twit in theAdj">{{randAdj}}</p>
+
 </body>
 </html>
