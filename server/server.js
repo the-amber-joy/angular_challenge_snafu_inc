@@ -9,11 +9,11 @@ app.get('/', function(request, response){
 });
 
 app.get('/adjectives', function(request, response){
-    response.sendFile(path.join(__dirname + '../..//data/adjectives.json'));
+    response.sendFile(path.join(__dirname + '../../data/adjectives.json'));
 });
 
 app.get('/nouns', function(request, response){
-    response.sendFile(path.join(__dirname + '../..//data/nouns.json'));
+    response.sendFile(path.join(__dirname + '../../data/nouns.json'));
 
 });
 
