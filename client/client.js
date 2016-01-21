@@ -6,7 +6,7 @@ app.controller('twitController', ['$http', '$scope', function($http, $scope) {
 
     nounArray = [];
     adjectiveArray = [];
-    $scope.twits = [];
+
 
 
     $http.get('/adjectives').then(function (response) {
@@ -26,10 +26,12 @@ app.controller('twitController', ['$http', '$scope', function($http, $scope) {
     });
 
     $scope.twit = function(){
+        $scope.twits = [];
         for (i = 0; i > 20; i++) {
             twitArray.push(adjectiveArray[i] + nounArray[i]);
         }
-        return twitArray;
+        return twits;
+        console.log(twits);
     };
 
 
