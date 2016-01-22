@@ -9,7 +9,7 @@
 <body ng-controller="twitController">
 <button ng-click="getTwits()">Get Twitter Handles</button>
     <ul>
-    <li ng-repeat="twit in twits">{{twit}}</li>
+    <li ng-repeat="twit in twits track by $index">@{{twit}}</li>
     </ul>
 
 </body>
