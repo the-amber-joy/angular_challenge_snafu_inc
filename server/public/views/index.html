@@ -2,11 +2,12 @@
 <html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Twitter Generator for SNAFU, INC</title>
     <script src="vendors/angular/angular.min.js"></script>
     <script src="assets/scripts/client.min.js"></script>
 </head>
 <body>
+<button ng-click="getTwits()">Get Twitter Handles</button>
     <ul>
     <li ng-repeat="twit in twits">{{twit}}</li>
     </ul>
