@@ -10,11 +10,10 @@ app.controller('twitController', ['$http', '$scope', function($http, $scope) {
 
     function getAdjectives() {
     $http.get('/adjectives').then(function (response) {
-        var tempAdj = [];
         var pickAdj = response.data.adjectives;
         var random = randomNumber(0, pickAdj.length);
-        for (i = 0; i > pickAdj.length; i++) {
-            tempAdj.push(pickAdj[random].adj);
+        for (i = 0; i < pickAdj.length; i++) {
+            adjectiveArray.push(pickAdj[random].adj);
         }
         console.log('pick adj:', pickAdj[random].adj);
         console.log('Adj array:', adjectiveArray);
