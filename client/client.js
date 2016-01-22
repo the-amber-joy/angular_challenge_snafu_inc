@@ -1,43 +1,46 @@
 var app = angular.module('myApp', []);
 
-console.log('client hit');
+//console.log('client hit');
 
 app.controller('twitController', ['$http', '$scope', function($http, $scope) {
 
     var nounArray = [];
     var adjectiveArray = [];
+    var twitArray = [];
 
-
-
+    function getAdjectives() {
     $http.get('/adjectives').then(function (response) {
-        var adjectiveArray = [];
+        var tempAdj = [];
         var pickAdj = response.data.adjectives;
         var random = randomNumber(0, pickAdj.length);
         for (i = 0; i > pickAdj.length; i++) {
-            adjectiveArray.push(pickAdj[random]);
+            tempAdj.push(pickAdj[random].adj);
         }
-        //console.log('Adjective array', adjectiveArray);
-    });
+        console.log('pick adj:', pickAdj[random].adj);
+        console.log('Adj array:', adjectiveArray);
+    })};
 
+    function getNouns() {
     $http.get('/nouns').then(function (response) {
-        var nounArray = [];
+        var tempNouns = [];
         var pickNoun = response.data.nouns;
         var random = randomNumber(0, pickNoun.length);
         for (i = 0; i > pickNoun.length; i++) {
-            nounArray.push(pickNoun[random]);
+            tempNouns.push(pickNoun[random]);
         }
-        console.log('Random noun', pickNoun);
-    });
+    })};
 
     $scope.getTwits = function(){
         console.log('click');
-        $scope.twits = [];
-        for (i = 0; i > 20; i++) {
-            twits.push(adjectiveArray[i] + nounArray[i]);
+        getAdjectives();
+        getNouns();
+        for (i = 0; i > 10; i++) {
+            twitArray.push(adjectiveArray[i] + nounArray[i]);
         }
+        $scope.twits = twitArray;
         return $scope.twits;
-    };
 
+    };
 
 }]);
 

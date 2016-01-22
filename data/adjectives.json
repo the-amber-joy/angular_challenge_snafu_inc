@@ -1,12 +1,12 @@
 {"adjectives" : [
-  {"adj1": "Cute"},
-  {"adj2": "Silly"},
-  {"adj3": "Fun"},
-  {"adj4": "Happy"},
-  {"adj5": "Sweet"},
-  {"adj6": "Darling"},
-  {"adj7": "Charming"},
-  {"adj8": "Adorable"},
-  {"adj9": "Kawaii"},
-  {"adj10": "Lovely"}
+  {"adj": "Cute"},
+  {"adj": "Silly"},
+  {"adj": "Fun"},
+  {"adj": "Happy"},
+  {"adj": "Sweet"},
+  {"adj": "Darling"},
+  {"adj": "Charming"},
+  {"adj": "Adorable"},
+  {"adj": "Kawaii"},
+  {"adj": "Lovely"}
 ]}
