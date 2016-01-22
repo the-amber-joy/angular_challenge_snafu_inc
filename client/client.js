@@ -6,7 +6,6 @@ app.controller('twitController', ['$http', '$scope', function($http, $scope) {
 
     var nounArray = [];
     var adjectiveArray = [];
-    var twitArray = [];
 
 
 
@@ -17,7 +16,7 @@ app.controller('twitController', ['$http', '$scope', function($http, $scope) {
         for (i = 0; i > pickAdj.length; i++) {
             adjectiveArray.push(pickAdj[random]);
         }
-        console.log('Adjective array', adjectiveArray);
+        //console.log('Adjective array', adjectiveArray);
     });
 
     $http.get('/nouns').then(function (response) {
@@ -27,16 +26,16 @@ app.controller('twitController', ['$http', '$scope', function($http, $scope) {
         for (i = 0; i > pickNoun.length; i++) {
             nounArray.push(pickNoun[random]);
         }
-        console.log('Noun array', nounArray);
+        console.log('Random noun', pickNoun);
     });
 
     $scope.getTwits = function(){
         console.log('click');
-        $scope.twits = twitArray;
-        for (i = 0; i > twitArray.length; i++) {
-            twitArray.push(adjectiveArray[i] + nounArray[i]);
+        $scope.twits = [];
+        for (i = 0; i > 20; i++) {
+            twits.push(adjectiveArray[i] + nounArray[i]);
         }
-        return twits;
+        return $scope.twits;
     };
 
 
