@@ -22,7 +22,7 @@ app.controller('twitController', ['$http', '$scope', function($http, $scope) {
             var pickAdj = response.data.adjectives;
 
             for (i = 0; i < pickAdj.length; i++) {
-                var randomAdj = randomNumber(0, 10);
+                var randomAdj = randomNumber(0, 9);
                 adjectiveArray.push(pickAdj[randomAdj].adj);
             }
             console.log('Adj array:', adjectiveArray);
@@ -31,10 +31,9 @@ app.controller('twitController', ['$http', '$scope', function($http, $scope) {
 
         $http.get('/nouns').then(function (response) {
             var pickNoun = response.data.nouns;
-            var randomNoun = randomNumber(0, 20);
 
             for (i = 0; i < pickNoun.length; i++) {
-
+                var randomNoun = randomNumber(0, 9);
                 nounArray.push(pickNoun[randomNoun].noun);
             }
             console.log('Noun array:', nounArray);
